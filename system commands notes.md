@@ -1,0 +1,3 @@
+linux 
+# commands 
+cd 
