@@ -1,4 +1,6 @@
 # ***linux commands***
+## ps gives a snapshot of current progress 
+
 
 ## cd ->
   __to change the directory__ 
@@ -37,6 +39,8 @@
 ## making an alias so that it ask everytime: 
   -> __alias rm="rm -i"__   
   -> it will ask "y" or "n"  
+  __unalias rm__ to remove the rm as an alias
+
   
 ## removing a file
   -> __rm "file one"__  
@@ -66,7 +70,36 @@
   --> __more profile__ similar to less   
   -> __head profile__ just print the first 10 lines of a file     
   -> __head -n 5 profile__ print the number of lines you want   
-  -> __tail profile__ last ten lines of profile   
+  -> __tail profile__ last ten lines of profile
 
-  
+## more commands    
+  -> __wc profile__ give us lines words and bytes of a file 
+  -> __wc -l profile__ for just number of  lines 
+  -> __which less__ gets to know the location of command 
+  -> __whatis which__ gives us a short description of how things are 
+
+## get to know more commands
+  -> __apropos__ or __man -k__ get to know new command by keyword 
+
+## shell commands:
+  -> __help__ get to know shell and its commands 
+  -> __info__ get informaton about commands and then click on star to enter inside to see inside commands 
+    -> use __<__ to get one step out 
+  -> __type ls__ give us information about a particular command one liner
+
+## setting a shortcut 
+  -> __alias ll="ls -l"__ it makes shortcut to command 
+  use -> ll 
+
+  -> __alias__ to get to know all alias present 
+  -> __unalias ll__ to remover the alias 
+
+## multiple argument 
+  -> __touch file1 file2 file3__ three files creating
+
+  __remove a filled directory -> not possible, so either make it empty or__
+  use __rm -r mydir__ forced removal of directory 
+
+  -> copying one direcotry to other __
+  __cp -r mydir mydir2__ 
   
