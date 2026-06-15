@@ -46,12 +46,27 @@
   -> __ls -lia__    
   -> hard link means that the same i node number is there in direcoty and its sub directory   
 ## ***whoami*** to ask your name!! 
-## reading inside file 
-  -> __less filename__     
+## reading inside file   
+  -> __less filename__       
   --> you can read inside the file, press q for exit   
-## get to know type of file   
-  -> file filename  
+## get to know type of file     
+  -> file filename    
   
 ## timestamp 
+## to show inside the sub direcotry   
+  -> __ls -l level1__  
+## to get long version of directory    
+  -> __ls -ld level1__  
+  -> __ls -ldi level1__ -> to get the i node number     
+  -> __very flexibele__ -> ls -l level1 -di <==> ls -d level1 -li <==> ls -i level1 -dl <==> ls level1 -idl      
+  --> also like __ls -l --directory --inode level1__ some has long form some does not, use man command for it     
+## knowing files better wali command   
+  -> __less profile__ to see content of a file, here profile is name of the file     
+  -> __cat profile__  to concatente the file data on screen, it just dump the data     
+  --> __more profile__ similar to less   
+  -> __head profile__ just print the first 10 lines of a file     
+  -> __head -n 5 profile__ print the number of lines you want   
+  -> __tail profile__ last ten lines of profile   
+
   
   
