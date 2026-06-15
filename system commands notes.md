@@ -101,5 +101,18 @@
   use __rm -r mydir__ forced removal of directory 
 
   -> copying one direcotry to other __
-  __cp -r mydir mydir2__ 
+  __cp -r mydir mydir2__  copy command does not assume recurssion we have to give -r so that it can work 
+  but _mv_ commands assumer recursssion so we dont have to tell explicitly 
+
+## links : _make links between files_
+  __ln -s file1 file2 => ln -l source destination__
+  __ln file1 file2__ creating without s will give them the same i node number 
+
+## file size:
+_files if they are less than a block take whole block or take {no block}, they will never take part of a block_ 
+__stat znew__ for file size 
+__du znew__ for aliean , __du -h znew__ for human 
+  __uname -a__ give all comprehnsive system information 
+  __free__ or __free -h__ gives more readable form about somethings 
+  __cat partitions__ tells about partitions __df__ for more 
   
