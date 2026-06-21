@@ -149,3 +149,21 @@ __P__ TO ACTIVATE THE COMMANDS
   -> __*4__ setting the fourth. 
   -> __*r !date__ read the date, __*,p__ now i will get all lines and then date at bottom but it is not added at the bottom yet 
   -> now, __*w__ to write date into the file 
+
+-> __.d__ to delete the current line 
+-> __*1__ selecting position of line(here 1 ), __*a__ write in next line then __.__ to finish line in next line and then enter. 
+
+-> __*2__ go to the line  (this is the line after first line)
+
+-> __*s/this/This/__ here s for search /word/replacment word/
+
+-> __*2p__ you are printing second line (This is the line after first line)
+
+->  _you have to write __*w__ after making any change_
+
+-> __*5,6j__ to join 5th and 6th line with each other 
+-> __*m1__ moving the current line on position on 1st (line postion start with 0) __*m0__ for 0th position. 
+-> __*u__ undo the change that i have done 
+-> __
+
+
