@@ -63,7 +63,8 @@
   -> __ls -ld level1__  
   -> __ls -ldi level1__ -> to get the i node number     
   -> __very flexibele__ -> ls -l level1 -di <==> ls -d level1 -li <==> ls -i level1 -dl <==> ls level1 -idl      
-  --> also like __ls -l --directory --inode level1__ some has long form some does not, use man command for it     
+  --> also like __ls -l --directory --inode level1__ some has long form some does not, use man command for it 
+
 ## knowing files better wali command   
   -> __less profile__ to see content of a file, here profile is name of the file     
   -> __cat profile__  to concatente the file data on screen, it just dump the data     
@@ -101,12 +102,15 @@
   use __rm -r mydir__ forced removal of directory 
 
   -> copying one direcotry to other __
+  __mv dir1/file1 dir2/__ directly moving files without changing directory , source destination 
   __cp -r mydir mydir2__  copy command does not assume recurssion we have to give -r so that it can work 
   but _mv_ commands assumer recursssion so we dont have to tell explicitly 
 
+  __cp -r level1/* new_direct/__ copying inside content of level1 directory to new_direct 
+
 ## links : _make links between files_
-  __ln -s file1 file2 => ln -l source destination__
-  __ln file1 file2__ creating without s will give them the same i node number 
+  __ln -s file1 file2 => ln -l source destination__  (soft link )
+  __ln file1 file2__ creating without s will give them the same i node number (hard link )
 
 ## file size:
 _files if they are less than a block take whole block or take {no block}, they will never take part of a block_ 
@@ -116,3 +120,32 @@ __du znew__ for aliean , __du -h znew__ for human
   __free__ or __free -h__ gives more readable form about somethings 
   __cat partitions__ tells about partitions __df__ for more 
   
+## -----------------------------------------------------------------------------------
+
+## command line editor
+__echo "line-1 hello world" > test.txt__ --> creates a new file named test.txt (or overwrites it if it already exists) and inserts the string "line-1 hello world" into it. 
+__echo "line-2 this is a new line" >> test.txt__ append a second line to this file without erasing the first 
+
+__cat test.txt__ to see the file 
+
+__ed test.txt__ enterning a interactive shell where you can edit a file line by line 
+__q__ to quit the shell 
+
+__P__ TO ACTIVATE THE COMMANDS 
+  -> __*1__ for first line 
+  -> __*$__ for last line of file 
+  -> __*,p__ for all content of the fle 
+  -> __*2,3p__ for second and third line 
+  -> __*/hello/__ search for the pattern (words) in which line it is 
+  -> 
+  -> __*1__ first line then __*+__ go to the next line, __*-__ go to the previous line 
+  -> __*;p__ you go the end of the buffer, from that line in which you are (printing all lines in between )
+  -> __*%p__ to see all the line 
+  -> __*.__ for current line 
+  -> __*!date__ give me the date 
+  -> 
+  -> _i am adding the line_ 
+
+  -> __*4__ setting the fourth. 
+  -> __*r !date__ read the date, __*,p__ now i will get all lines and then date at bottom but it is not added at the bottom yet 
+  -> now, __*w__ to write date into the file 
