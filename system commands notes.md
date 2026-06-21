@@ -122,7 +122,7 @@ __du znew__ for aliean , __du -h znew__ for human
   
 ## -----------------------------------------------------------------------------------
 
-## command line editor
+## command line editor (ed editor )
 __echo "line-1 hello world" > test.txt__ --> creates a new file named test.txt (or overwrites it if it already exists) and inserts the string "line-1 hello world" into it. 
 __echo "line-2 this is a new line" >> test.txt__ append a second line to this file without erasing the first 
 
@@ -164,6 +164,25 @@ __P__ TO ACTIVATE THE COMMANDS
 -> __*5,6j__ to join 5th and 6th line with each other 
 -> __*m1__ moving the current line on position on 1st (line postion start with 0) __*m0__ for 0th position. 
 -> __*u__ undo the change that i have done 
--> __
+##  __1,$s/\(.*\)/PREFIX \1/__  
+
+__1,$__ for the first to last line ,__(.*__: The dot . matches any character, and the asterisk * matches zero or more of those characters. Together, entire content of the line.)
+
+PREFIX :text insert at the beginning of each line,
+_\1: This is a back-reference. It tells ed to take the text that was captured inside the \(...\) in the "Find" section and place it here._ 
+
+__3,5s/PREFIX/prefix/__ from third to fifth i am substituting the PREFIX to prefix 
+
+## readlink -f /usr/bin/pico 
+-> it is pointing to /usr/bin/nano 
+
+.bashrc _the bash shell code_ _copy it for making any change_
+## nano editor 
+  -> visual 
+  nano test.bashrc ( i made a copy earlier by cp command of bashrc-> test.bashrc )
+  -> ctrl + o to overwrite the command press enter and ctl+x to out of file 
+  _see notes for all commands and features_ 
+
+## vi editor 
 
 
