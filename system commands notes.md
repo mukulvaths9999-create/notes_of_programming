@@ -184,6 +184,13 @@ __3,5s/PREFIX/prefix/__ from third to fifth i am substituting the PREFIX to pref
   _see notes for all commands and features_   
 
 ## vi editor 
-_just see the pdf bro it has all the commands_  
+_just see the pdf bro it has all the commands_ 
+__dmseg > dmseg.txt__ to copy this file , *this is only in home/mukul_pandit* 
+__100dd__ will delete 100 lines
+__....:..__ it means that there are four character than colon two character so in this way like __%s/...:../hello/g__ g for global in that file .
+
+## emacs editor 
+__emacs -nw filename__ it force it to open in terminal 
+ 
 
 
