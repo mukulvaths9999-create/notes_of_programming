@@ -191,6 +191,38 @@ __....:..__ it means that there are four character than colon two character so i
 
 ## emacs editor 
 __emacs -nw filename__ it force it to open in terminal 
- 
+
+__ifconfig__: Your initial attempt to view network interfaces (which triggered the discussion on modern alternatives).
+__ip addr__: The modern command used to successfully list your network interfaces and IP addresses.
+__nslookup www.iitm.ac.in__: Your first attempt at a DNS lookup.
+__dig google.com__: Suggested for practice to see a successful forward DNS query.
+__traceroute www.iitm.ac.in__: Suggested for visualizing network paths.
+
+
+## combining commands and files 
+__ls ; date ; wc -l /etc/profile ;__ execute all commands one by one 
+__(ls ; date ; wc -l /etc/profile ;)__ execute in a subshelll 
+__echo $BASH_SUBSHELL__ to see the subshell no.
+
+__(echo $BASH_SUBSHELL)__ 
+__1__
+to see what subshell is there (when you use bracket it executes in a subshell)
+
+__ls /blah && date__ it means that second command only works if first commands works (like and )
+__ls /blah || date__ it means second is only executed if first fails 
+
+______________________________  
+__ls -1 /usr/bin__ it will give one command per line of the output 
+__ls -1 /usr/bin > file1__ redirect the content of the file to file1
+__ls -1 /blah > file1__ give error and overwrite the file (now content is 0)
+
+__hwinfo__ give information about hardware __hwinfo > hwinfo.txt__ redirect it to file 
+
+__cat > file1__ if you have not specify any file you can type from keyboard in this command 
+come out using ctrl + D 
+
+__cat__ it will just type and show the word on screen line by line, ctl +d for come out 
+
+__command >> file1__ it will append the file and if not exist it will be created 
 
 
