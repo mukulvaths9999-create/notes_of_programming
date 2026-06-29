@@ -225,4 +225,37 @@ __cat__ it will just type and show the word on screen line by line, ctl +d for c
 
 __command >> file1__ it will append the file and if not exist it will be created 
 
+__ls $HOME /blah 2> error.txt__ first it will redirect the eroor to eroor.txt file , it will not show error that occured on screen bcoz it redirect it into error.txt file 
+
+## REDIRECTIONS 
+
+__cat < error.txt__ (redirecting the input from keyboard to use file content )
+-
+__wc < error.txt__ it means content has to be read form command line 
+__ls $HOME /blah > file1 2>&1__ redirect both output and error to file1 
+
+__ls /usr/bin | wc -l__ redirecting output of one command to input of second command , but error are only directed to screen 
+
+__ls /usr/bin | wc -l > file1__ (upper command and )redirect output of second command to file1 
+
+__/dev/null__ black hole to direct things (dev is very sensitive do not use anythings else) 
+
+__tee - Copy standard input to each FILE, and also to standard output__ 
+
+__lsb_release -a__  for operating system of linux 
+
+__apt cache search package fortune__ get to know where fortune keyword is (so many fortune type things )
+
+__apt-cache pkgnames__ installed package names 
+
+__apt-cache pkgnames nm__ package starting with nm 
+
+__apt-cache show fortunes__ show information about things 
+
+__md5sum file1.txt__
+it gives the stritg that is different for every file (471c7f53bae1ec7c12553dd2424604f2  file1.txt)
+
+__sha1um file1.txt__
+
+__sha256sum file2.txt__ 
 
