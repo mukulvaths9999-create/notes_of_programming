@@ -259,3 +259,46 @@ __sha1um file1.txt__
 
 __sha256sum file2.txt__ 
 
+## software managment part 2 
+
+__sudo cat /etc/sudoers__ sudo give us permission to get root privilage if we are added on it 
+
+__/etc/apt__ it has all installed files from website that you have installed 
+
+__cat sources.list__ you will get the another adress after that in new one __/etc/apt/sources.list.d/ubuntu.sources__ 
+
+__sudo apt-get updates__ to get the updates 
+__sudo apt-get upgrade__ to upgrade the packages that you have installed 
+
+__sudo apt autoremove__  to remove the unesscdery package after upgrading bcoz they were just there to supprt some download and now we have the newer version of that 
+
+__sudo apt-get remove fortunes__ it remove the package __sudo apt-get remove fortune-mod__ it remove the cookies  
+
+__sudo apt-get install fortune-mod__ to install the fortune package
+
+__sudo apt-get reinstall fortune-mod__ to reinstall the package ,to refresh old one 
+
+__cd /var/lib/dpkg/__ -> __less status__ to see status of packages 
+
+__mukul_pandit@DESKTOP-O2A5EAO:/var/lib/dpkg/info$ more wget.md5sums__ 
+*mukul_pandit@DESKTOP-O2A5EAO:/var/lib/dpkg/info$ md5sum /usr/bin/wget* 
+_c57c56d1d70b45a9327bbb679c8bd43  /usr/bin/wget_
+
+to see if the file has been tempered or not 
+__apt search fortune__ to search commands related to it 
+## use dpkg
+
+*gives us information about a package* 
+
+__dpkg -l nmap__ gives informatin about the architecture (list)
+__dpkg -L nmap__ give us the various files that are installed with nmap package (list files) 
+__apt-cache show (package_name)__ == __dpkg -s nmap__  gives utilites about that package (status)
+
+*dpkg -S /usr/bin/perl* (search)
+*perl-base: /usr/bin/perl*  shows from where this particular package has come (location ) 
+
+__dpkg -S /usr/bin/perl__ search for which installed package owns a specific file. (search)
+
+**dpkg-query -W -f='${Section} ${binary:package}\n'** it will give me a list of all the section and within each section what are the binary package  
+
+__dpkg-query -W -f='${Section} ${binary:package}\n' | grep shells__ it filter the line that only have the 
