@@ -302,3 +302,39 @@ __dpkg -S /usr/bin/perl__ search for which installed package owns a specific fil
 **dpkg-query -W -f='${Section} ${binary:package}\n'** it will give me a list of all the section and within each section what are the binary package  
 
 __dpkg-query -W -f='${Section} ${binary:package}\n' | grep shells__ it filter the line that only have the 
+
+## linux operating system 
+
+**sleep 3** making it sleep for 3 second 
+
+__coproc sleep 10__ getting 10 second to type anything in sleep and then session gets over 
+__ps --forest__ to see the p ID of the bash shell and now 
+__kill -9 754__ that 954 is pid , that is used to kill the process 
+
+__sleep 30 &__ , _&_ to put the process in background , type _fg_ to put it in foregroung and then use ctrl + c to kill it 
+
+__jobs__ to see the backgroung process 
+__top__ tell about the process running in cpu ,_q_ or _ctrl+c_ for kill, _ctrl+z_ for suspending the task then _fg_ for getting in foregroung and then kill it 
+
+__bash -c "echo \$-"__ initiating a child shell 
+
+__bash -c "echo \$$; echo \$-; ps --forest"__ first is giving the pid ,second is shell that lacks interatcive thing , and third is forest 
+
+__history__ 
+__echo{a..z}__ print all alphabet a to z 
+__echo*__ to list all the files in pwd
+
+## error code wala method 
+__echo $?__ will give zero if previous code ran without error , but give between 1 to 255 if the prev. code had some error , the number depend on type of error 
+
+__ps -e__ list the all process that is running in the background 
+
+_he instructor is demonstrating that Linux exit codes are limited to a range of 0–255, so any value higher than that is treated as a modulo 256 operation._
+
+__comm -12__: The comm command compares two files line by line.
+*-1 suppresses the output of lines unique to the first file.*
+*-2 suppresses the output of lines unique to the second file.*
+*By using -12, only the third column (lines common to both files) is displayed.* 
+
+**tr**: *A character-translation utility. It operates by mapping individual characters from one set to another rather than performing* *string-level replacements.*
+
